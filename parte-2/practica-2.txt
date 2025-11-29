@@ -1,0 +1,132 @@
+
+1.     Objetivo
+    El objetivo de esta práctica es que el alumno aprenda a modelar e implementar eficientemente la resolución de problemas de búsqueda
+heurı́stica.
+
+
+2.2.   Parte 2: Algoritmos de búsqueda
+    El propósito de la segunda parte de la práctica consiste en encontrar la ruta más corta entre dos puntos de
+alguno de los mapas de los Estados Unidos que están disponibles en la 9th DIMACS Shortest-Path Challenge1 .
+La especificación de cada grafo consiste en dos ficheros con sufijo .gr y .co:
+
+       El primero describe un grafo dirigido indicando los arcos entre dos pares cualquiera de vértices iden-
+       tificados inequı́vocamente por su ı́ndice, con la distancia entre ellos sobre la superficie de la Tierra en
+       metros, y que se especifican con lı́neas que tienen el formato:
+
+                                               a <id1><id2><coste>
+
+       siendo posible ignorar el resto de las lı́neas.
+
+       El segundo contiene la longitud y latitud de cada vértice sobre la superficie de la Tierra multiplicados por
+       106 , en lı́neas que tienen el formato:
+
+                                          v <id><longitud><latitud>
+
+       siendo posible ignorar el resto de las lı́neas.
+
+    Por ejemplo, las lı́neas 8 y 9 del fichero USA-road-d.BAY.gr son:
+
+a 1 2 1988
+a 2 1 1988
+
+que indica que desde el vértice 1 hasta el 2 hay un arco con una distancia de 1.988 metros e, igualmente, es
+posible ir desde el segundo vértice hasta el primero, recorriendo una distancia también igual a 1.988 metros.
+    El fichero de coordenadas especifica, también en las lı́neas 8 y 9, que la longitud y latitud de cada uno de
+estos puntos es:
+
+v 1 -121745853 37608914
+v 2 -121745591 37610691
+
+es decir, el vértice 1 se encuentra en (37,608914, -121,745853), mientras que el vértice 2 se encuentra en
+(37,610691, -121,745591) —donde se han invertido intencionadamente la longitud y latitud para expresar pun-
+tos sobre la superficie de la Tierra de acuerdo al convenio internacional.
+    Las figura 2 muestra los dos grafos más pequeños de la 9th DIMACS Shortest-Path Challenge con 264.346
+y 321.270 vértices cada uno, respectivamente.
+    Se pide implementar un script en Python 3.8 (o posterior) llamado parte-2.py que resuelva cualquier
+instancia del camino más corto entre dos puntos cualesquiera sobre cualquiera de los mapas de la 9th DIMACS
+Shortest-Path Challenge. El script debe recibir exactamente cuatro argumentos: vertice-1 vertice-2
+nombre-del-mapa, y fichero-salida. A continuación se muestran diferentes casos de uso:
+   1
+     Ver https://www.diag.uniroma1.it/˜challenge9/download.shtml en las columnas Distance graph y Coordi-
+nates.
+
+
+                                                         3
+             (a) Mapa de New York (NY)                                  (b) Mapa de Bay Area (BAY)
+
+         Figura 2: Vistas de los dos grafos más pequeños de la 9th DIMACS Shortest-Path Challenge
+
+
+     $   ./parte-2.py        1    309   USA-road-d.BAY solucion
+     $   ./parte-2.py        1    309   /tmp/USA-road-d.BAY solucion
+     $   ./parte-2.py        1    309   USA-road-d.BAY ../../datos/solucion
+     $   ./parte-2.py        1    309   /tmp/USA-road-d.BAY ../../datos/solucion
+
+    Nótese que el nombre USA-road-d.BAY identifica inequı́vocamente a los ficheros de grafo, USA--
+road-d.BAY.gr, y de coordenadas, USA-road-d.BAY.co que deben estar en el mismo directorio. Como
+se ve, cada fichero puede indicarse con una ruta absoluta o relativa, y si no contiene ninguna entonces se asume
+aquella en la que se encuentra el script, que debe:
+
+      Leer los ficheros de entrada de grafo y coordenadas indicado en tercer lugar, y que tienen el formato
+      indicado anteriormente.
+      Resolver el problema del camino más corto desde el vértice indicado en primer lugar, hasta el vértice
+      indicado en segundo lugar, y escribir la solución en el fichero indicado en cuarto lugar con el siguiente
+      formato:
+
+      <inicio> - ... - <vertice-i> - (coste arco <i,i+1>) - <vértice-i+1> - ... - <final>
+
+
+
+      Además, el script parte-2.py debe mostrar en pantalla la siguiente información: número de vértices
+      procesados del fichero de coordenadas, número de arcos procesados del fichero de grafo, coste de la
+      sólución óptima encontrada y, a continuación, el número de nodos expandidos y el tiempo dedicado para
+      resolver el problema.
+
+    Por ejemplo, la ejecución:
+
+     $ ./parte-2.py 1 309 USA-road-d.BAY solucion
+
+podrı́a mostrar en pantalla la siguiente información:
+
+ # vertices: 321270
+ # arcos     : 800172
+ Solución óptima encontrada con coste 10216
+
+ Tiempo de ejecución: 0.15 segundos
+ # expansiones       : 4 (25.12 nodes/sec)
+
+                                                         4
+y el fichero de salida solucion tendrı́a los contenidos siguientes:
+     1 - (1498) - 308 - (8718) - 309
+de modo que la suma de los costes de los arcos, 1498 + 8718, es exactamente igual al coste de la solución
+óptima encontrada, 10216, mostrada en la salida del script.
+     Para resolver el problema se pide elegir un algoritmo de búsqueda, e implementar una heurı́stica que re-
+suelva el problema óptimamente expandiendo menos nodos que el mismo algoritmo basado en fuerza bruta,
+que también debes implementar, y documentar en el análisis de resultados —ver sección 2.3. La implemen-
+tación del script parte-2.py debe contener la implementación más eficiente posible usando, para ello, la
+mejor selección de algoritmo, estructuras de datos y heurı́stica que sea posible. Se exige, en particular, que la
+implementación de esta parte contenga al menos los siguientes ficheros:
+
+        parte-2.py: script principal que resuelve el problema.
+
+        grafo.py: definición de una clase que sirva para leer los contenidos de un grafo y representarlos
+        eficientemente en memoria.
+
+        abierta.py: definición de una clase con la implementación de la lista abierta elegida, si tu algoritmo
+        la necesitara.
+
+        cerrada.py: definición de una clase con la implementación de la lista cerrada elegida, si tu algoritmo
+        la necesitara.
+
+        algoritmo.py: definición de una clase que resuelve óptimamente la instancia indicada en los paráme-
+        tros del script parte-2.py.
+                                                        
+    En la evaluación de la implementación del modelo, un modelo correcto supondrá la mitad de los puntos.
+Para obtenerse el resto de puntos, la implementación del problema deberá:
+
+        Entregar código fuente correctamente organizado y comentado. Los nombres deben ser descriptivos.
+        Deberán añadirse comentarios en los casos en que sea necesario mejorar la legibilidad y comprensión.
+
+
+
+
