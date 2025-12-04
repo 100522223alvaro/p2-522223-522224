@@ -81,8 +81,11 @@ class Grafo:
         
         # Inicializamos listas con tamaño fijo para acceso directo por índice
         # +1 porque los IDs de DIMACS empiezan en 1 (no en 0)
-        self.coordenadas = [(0, 0)] * (max_id + 1)
-        self.adyacencia = [{} for _ in range(max_id + 1)]
+        for i in range(max_id + 1):
+            self.coordenadas.append((0, 0))
+
+        for i in range(max_id + 1):
+            self.adyacencia.append({})
 
         # Segunda pasada: asignar coordenadas a sus posiciones en la lista
         for nid, coord in temp_coords.items():

@@ -3,13 +3,7 @@ import sys
 import time
 import random
 from grafo import Grafo
-from algoritmo import AStar
-
-# Clase para Fuerza Bruta (Dijkstra) que hereda de AStar
-# Simplemente anulamos la heurística para que devuelva 0 siempre.
-class Dijkstra(AStar):
-    def _heuristica(self, nodo_actual, nodo_objetivo):
-        return 0
+from algoritmo import AStar, Dijkstra
 
 def ejecutar_caso(grafo, nombre_caso, inicio, fin):
     print(f"\n--- {nombre_caso} (Nodos {inicio} -> {fin}) ---")

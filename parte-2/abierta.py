@@ -5,8 +5,6 @@ Esta clase gestiona el conjunto de nodos pendientes de explorar,
 ordenados por su valor f(n) = g(n) + h(n)
 """
 
-import heapq
-
 # -----------------------------------------------------------------------------
 # Clase ListaAbierta: Gestión de nodos a explorar en A*
 # -----------------------------------------------------------------------------
@@ -16,23 +14,27 @@ class ListaAbierta:
     
     def __init__(self):
         """Inicializa una lista abierta vacía."""
-        # Heap que almacena elementos como (f_score, nodo_id)
-        # El heap se ordena automáticamente por el primer elemento de la tupla (f_score), menor valor = mayor prioridad
-        self.heap = []
+        self.lista = []
     
     def push(self, nodo, f_score):
         """Inserta un nodo en la lista abierta con su valor f(n)."""
-        heapq.heappush(self.heap, (f_score, nodo))
+        self.lista.append((f_score, nodo))
         
     def pop(self):
         """Extrae y retorna el nodo con menor valor f(n) de la lista abierta."""
-        # Verificamos si el heap está vacío
-        if not self.heap:
+        if not self.lista:
             return None
         
-        # Extraemos y retornamos el elemento con menor f_score
-        return heapq.heappop(self.heap)
+        # Búsqueda lineal del elemento con menor f_score
+        # Encontramos el índice del elemento con menor f_score
+        idx_min = 0
+        for i in range(1, len(self.lista)):
+            if self.lista[i][0] < self.lista[idx_min][0]:
+                idx_min = i
+        
+        # Extraemos el elemento
+        return self.lista.pop(idx_min)
         
     def is_empty(self):
         """Verifica si la lista abierta está vacía."""
-        return len(self.heap) == 0
+        return len(self.lista) == 0

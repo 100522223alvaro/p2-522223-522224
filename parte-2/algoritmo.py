@@ -108,8 +108,7 @@ class AStar:
             if u == fin:
                 return g_score[u], self._reconstruir_camino(came_from, inicio, fin)
 
-            # Lazy deletion: ignorar nodos ya expandidos
-            # (pueden aparecer duplicados en el heap con diferentes f_scores)
+            # Ignorar nodos ya expandidos
             if cerrada.contains(u):
                 continue
             
@@ -169,3 +168,12 @@ class AStar:
         # Invertir para obtener el camino de inicio a fin
         camino.reverse()
         return camino
+
+# -----------------------------------------------------------------------------
+# Clase para Fuerza Bruta (Dijkstra) que hereda de AStar
+# -----------------------------------------------------------------------------
+
+class Dijkstra(AStar):
+    def _heuristica(self, nodo_actual, nodo_objetivo):
+        # Anulamos la heurística para que devuelva 0 siempre.
+        return 0
