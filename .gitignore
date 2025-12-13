@@ -1,0 +1,6 @@
+
+# Ignore dataset files
+*.gr
+*.co
+__pycache__/
+*.py[cod]
