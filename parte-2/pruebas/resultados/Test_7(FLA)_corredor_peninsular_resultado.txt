@@ -1,0 +1,9 @@
+>>> EJECUTANDO TEST: Test_7(FLA)_corredor_peninsular
+    Ruta: Miami (578997) -> Jacksonville (221045)
+    [1/2] Ejecutando A* ... Hecho (18.557s)
+    [2/2] Ejecutando Dijkstra ... Hecho (12.073s)
+    RESULTADOS:
+      A* -> Coste: 5504886; Nodos: 792661; Tiempo: 18.5573s
+      Dijkstra -> Coste: 5504886; Nodos: 801341; Tiempo: 12.0731s
+      Eficiencia: A* expandió un 1.08% MENOS de nodos.
+      Estado: OK

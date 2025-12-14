@@ -1,0 +1,2 @@
+>>> EJECUTANDO TEST: Test_2(NY)_nodo_inexistente
+    [ERROR] Coordenadas inválidas para '(95.0, 200.0)'

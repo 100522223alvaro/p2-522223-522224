@@ -1,0 +1,9 @@
+>>> EJECUTANDO TEST: Test_1(NY)_trayecto_muy_corto
+    Ruta: Manhattan (188475) -> Manhattan_Vecino (188518)
+    [1/2] Ejecutando A* ... Hecho (0.000s)
+    [2/2] Ejecutando Dijkstra ... Hecho (0.000s)
+    RESULTADOS:
+      A* -> Coste: 794; Nodos: 1; Tiempo: 0.0001s
+      Dijkstra -> Coste: 794; Nodos: 1; Tiempo: 0.0000s
+      Eficiencia: A* expandió un 0.00% MENOS de nodos.
+      Estado: OK

@@ -1,0 +1,9 @@
+>>> EJECUTANDO TEST: Test_4(COL)_travesia_montanosa
+    Ruta: Denver (100367) -> GrandJunction (298323)
+    [1/2] Ejecutando A* ... Hecho (6.883s)
+    [2/2] Ejecutando Dijkstra ... Hecho (6.507s)
+    RESULTADOS:
+      A* -> Coste: 3902845; Nodos: 373770; Tiempo: 6.8825s
+      Dijkstra -> Coste: 3902845; Nodos: 384504; Tiempo: 6.5071s
+      Eficiencia: A* expandió un 2.79% MENOS de nodos.
+      Estado: OK

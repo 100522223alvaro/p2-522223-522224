@@ -1,0 +1,9 @@
+>>> EJECUTANDO TEST: Test_3(BAY)_caso_normal
+    Ruta: (37.608914, -121.745853) (1) -> (37.614648, -121.75037) (309)
+    [1/2] Ejecutando A* ... Hecho (0.000s)
+    [2/2] Ejecutando Dijkstra ... Hecho (0.000s)
+    RESULTADOS:
+      A* -> Coste: 10216; Nodos: 4; Tiempo: 0.0001s
+      Dijkstra -> Coste: 10216; Nodos: 4; Tiempo: 0.0000s
+      Eficiencia: A* expandió un 0.00% MENOS de nodos.
+      Estado: OK
