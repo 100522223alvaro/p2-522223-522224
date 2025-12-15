@@ -1,2 +1,2 @@
->>> EJECUTANDO TEST: Test_2(NY)_nodo_inexistente
-    [ERROR] Coordenadas inválidas para '(95.0, 200.0)'
+>>> INICIANDO: Test_2(NY)_nodo_inexistente
+    [ERROR] Fallo en preparacion del test: Coordenadas fuera de rango valido

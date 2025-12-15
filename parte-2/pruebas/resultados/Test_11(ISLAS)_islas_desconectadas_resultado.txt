@@ -1,9 +1,9 @@
->>> EJECUTANDO TEST: Test_11(ISLAS)_islas_desconectadas
-    Ruta: IslaA (1) -> IslaB (4)
-    [1/2] Ejecutando A* ... Hecho (0.000s)
-    [2/2] Ejecutando Dijkstra ... Hecho (0.000s)
-    RESULTADOS:
-      A* -> Coste: None; Nodos: 1; Tiempo: 0.0000s
-      Dijkstra -> Coste: None; Nodos: 1; Tiempo: 0.0000s
-      Eficiencia: A* expandió un 0.00% MENOS de nodos.
-      Estado: OK
+>>> TEST: Test_11(ISLAS)_islas_desconectadas
+    Trayecto: IslaA (1) -> IslaB (4)
+    A* completado en 0.000s
+    Dijkstra completado en 0.000s
+    METRICAS:
+      A* -> Coste: None | Nodos: 1 | Tiempo: 0.0000s
+      Dijkstra -> Coste: None | Nodos: 1 | Tiempo: 0.0000s
+      A* expandio un 0.00% menos de nodos que Dijkstra.
+      Resultado: OK

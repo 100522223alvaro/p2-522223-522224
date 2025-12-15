@@ -1,9 +1,9 @@
->>> EJECUTANDO TEST: Test_8(CAL)_larga_distancia
-    Ruta: SanDiego (1566861) -> Sacramento (1480897)
-    [1/2] Ejecutando A* ... Hecho (33.951s)
-    [2/2] Ejecutando Dijkstra ... Hecho (33.753s)
-    RESULTADOS:
-      A* -> Coste: 8052821; Nodos: 1357609; Tiempo: 33.9514s
-      Dijkstra -> Coste: 8052821; Nodos: 1386520; Tiempo: 33.7532s
-      Eficiencia: A* expandió un 2.09% MENOS de nodos.
-      Estado: OK
+>>> TEST: Test_8(CAL)_larga_distancia
+    Trayecto: SanDiego (1566861) -> Sacramento (1480897)
+    A* completado en 43.589s
+    Dijkstra completado en 40.600s
+    METRICAS:
+      A* -> Coste: 8052821 | Nodos: 1357609 | Tiempo: 43.5894s
+      Dijkstra -> Coste: 8052821 | Nodos: 1386520 | Tiempo: 40.5997s
+      A* expandio un 2.09% menos de nodos que Dijkstra.
+      Resultado: OK

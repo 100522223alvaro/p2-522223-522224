@@ -1,9 +1,9 @@
->>> EJECUTANDO TEST: Test_9(NE)_trayecto_urbano
-    Ruta: Philadelphia (1490890) -> NewYork_City (1347350)
-    [1/2] Ejecutando A* ... Hecho (17.158s)
-    [2/2] Ejecutando Dijkstra ... Hecho (21.951s)
-    RESULTADOS:
-      A* -> Coste: 1408205; Nodos: 470811; Tiempo: 17.1575s
-      Dijkstra -> Coste: 1408205; Nodos: 486164; Tiempo: 21.9506s
-      Eficiencia: A* expandió un 3.16% MENOS de nodos.
-      Estado: OK
+>>> TEST: Test_9(NE)_trayecto_urbano
+    Trayecto: Philadelphia (1490890) -> NewYork_City (1347350)
+    A* completado en 18.874s
+    Dijkstra completado en 18.174s
+    METRICAS:
+      A* -> Coste: 1408205 | Nodos: 470811 | Tiempo: 18.8744s
+      Dijkstra -> Coste: 1408205 | Nodos: 486164 | Tiempo: 18.1738s
+      A* expandio un 3.16% menos de nodos que Dijkstra.
+      Resultado: OK

@@ -1,9 +1,9 @@
->>> EJECUTANDO TEST: Test_5(COL)_travesia_montanosa_inversa
-    Ruta: GrandJunction (298323) -> Denver (100367)
-    [1/2] Ejecutando A* ... Hecho (2.430s)
-    [2/2] Ejecutando Dijkstra ... Hecho (2.200s)
-    RESULTADOS:
-      A* -> Coste: 3902845; Nodos: 181796; Tiempo: 2.4300s
-      Dijkstra -> Coste: 3902845; Nodos: 195246; Tiempo: 2.2001s
-      Eficiencia: A* expandió un 6.89% MENOS de nodos.
-      Estado: OK
+>>> TEST: Test_5(COL)_travesia_montanosa_inversa
+    Trayecto: GrandJunction (298323) -> Denver (100367)
+    A* completado en 3.007s
+    Dijkstra completado en 2.860s
+    METRICAS:
+      A* -> Coste: 3902845 | Nodos: 181796 | Tiempo: 3.0073s
+      Dijkstra -> Coste: 3902845 | Nodos: 195246 | Tiempo: 2.8595s
+      A* expandio un 6.89% menos de nodos que Dijkstra.
+      Resultado: OK

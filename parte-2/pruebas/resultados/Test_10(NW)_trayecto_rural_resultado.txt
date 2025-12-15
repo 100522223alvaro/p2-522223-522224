@@ -1,9 +1,9 @@
->>> EJECUTANDO TEST: Test_10(NW)_trayecto_rural
-    Ruta: Seattle (1161480) -> Spokane (956216)
-    [1/2] Ejecutando A* ... Hecho (27.039s)
-    [2/2] Ejecutando Dijkstra ... Hecho (26.834s)
-    RESULTADOS:
-      A* -> Coste: 4430296; Nodos: 682606; Tiempo: 27.0395s
-      Dijkstra -> Coste: 4430296; Nodos: 734036; Tiempo: 26.8343s
-      Eficiencia: A* expandió un 7.01% MENOS de nodos.
-      Estado: OK
+>>> TEST: Test_10(NW)_trayecto_rural
+    Trayecto: Seattle (1161480) -> Spokane (956216)
+    A* completado en 20.656s
+    Dijkstra completado en 20.804s
+    METRICAS:
+      A* -> Coste: 4430296 | Nodos: 682606 | Tiempo: 20.6559s
+      Dijkstra -> Coste: 4430296 | Nodos: 734036 | Tiempo: 20.8040s
+      A* expandio un 7.01% menos de nodos que Dijkstra.
+      Resultado: OK

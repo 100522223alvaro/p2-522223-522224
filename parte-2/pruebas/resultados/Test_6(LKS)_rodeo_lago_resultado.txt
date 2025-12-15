@@ -1,9 +1,9 @@
->>> EJECUTANDO TEST: Test_6(LKS)_rodeo_lago
-    Ruta: Milwaukee (1044556) -> GrandRapids (375592)
-    [1/2] Ejecutando A* ... Hecho (39.304s)
-    [2/2] Ejecutando Dijkstra ... Hecho (70.808s)
-    RESULTADOS:
-      A* -> Coste: 4076213; Nodos: 1009276; Tiempo: 39.3038s
-      Dijkstra -> Coste: 4076213; Nodos: 1123183; Tiempo: 70.8077s
-      Eficiencia: A* expandió un 10.14% MENOS de nodos.
-      Estado: OK
+>>> TEST: Test_6(LKS)_rodeo_lago
+    Trayecto: Milwaukee (1044556) -> GrandRapids (375592)
+    A* completado en 49.618s
+    Dijkstra completado en 55.566s
+    METRICAS:
+      A* -> Coste: 4076213 | Nodos: 1009276 | Tiempo: 49.6183s
+      Dijkstra -> Coste: 4076213 | Nodos: 1123183 | Tiempo: 55.5661s
+      A* expandio un 10.14% menos de nodos que Dijkstra.
+      Resultado: OK

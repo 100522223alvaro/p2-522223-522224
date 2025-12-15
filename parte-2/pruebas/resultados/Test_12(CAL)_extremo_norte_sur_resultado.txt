@@ -1,0 +1,9 @@
+>>> TEST: Test_12(CAL)_extremo_norte_sur
+    Trayecto: CrescentCity (1120911) -> SanYsidro (652816)
+    A* completado en 61.186s
+    Dijkstra completado en 53.241s
+    METRICAS:
+      A* -> Coste: 13321188 | Nodos: 1802903 | Tiempo: 61.1856s
+      Dijkstra -> Coste: 13321188 | Nodos: 1809872 | Tiempo: 53.2406s
+      A* expandio un 0.39% menos de nodos que Dijkstra.
+      Resultado: OK
