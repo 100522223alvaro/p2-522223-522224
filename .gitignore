@@ -1,6 +1,0 @@
-# Ignore all files in the maps directory
-parte-2/mapas/*
-
-# Exceptions (do not ignore these files)
-!parte-2/mapas/ISLAS-road-d.co
-!parte-2/mapas/ISLAS-road-d.gr
